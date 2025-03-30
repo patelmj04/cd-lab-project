@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLR Parser Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SLR Parser Generator</h1>
+            <p>Enter a context-free grammar to generate the SLR parsing table</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <h2>Grammar Input</h2>
+                <p class="instructions">
+                    Enter your grammar using the format: <code>A -> α | β</code> (one production per line).<br>
+                    Use <code>ε</code> or <code>epsilon</code> for empty string. Non-terminals should start with uppercase letters.
+                </p>
+                <div class="form-group">
+                    <textarea id="grammar-input" placeholder="E -> E + T | T
+T -> T * F | F
+F -> ( E ) | id"></textarea>
+                    <div class="buttons">
+                        <button id="load-example">Load Example</button>
+                        <button id="parse-btn">Generate SLR Parsing Table</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="results-section" class="hidden">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="parsing-table">Parsing Table</button>
+                    <button class="tab-btn" data-tab="canonical-collection">Canonical Collection</button>
+                    <button class="tab-btn" data-tab="first-follow">FIRST & FOLLOW Sets</button>
+                    <button class="tab-btn" data-tab="grammar">Augmented Grammar</button>
+                </div>
+
+                <div id="parsing-table" class="tab-content active">
+                    <h2>SLR Parsing Table</h2>
+                    <div id="parsing-table-content"></div>
+                </div>
+
+                <div id="canonical-collection" class="tab-content">
+                    <h2>Canonical Collection of LR(0) Item Sets</h2>
+                    <div id="canonical-collection-content"></div>
+                </div>
+
+                <div id="first-follow" class="tab-content">
+                    <h2>FIRST and FOLLOW Sets</h2>
+                    <div id="first-follow-content"></div>
+                </div>
+
+                <div id="grammar" class="tab-content">
+                    <h2>Augmented Grammar</h2>
+                    <pre id="grammar-content"></pre>
+                </div>
+            </section>
+
+            <div id="error-message" class="hidden"></div>
+        </main>
+
+        <footer>
+            <p>SLR Parser Generator - Compiler Construction Tool</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
