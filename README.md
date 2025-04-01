@@ -2,6 +2,9 @@
 
 A web-based tool for generating SLR parsing tables from context-free grammars. This application allows users to input a grammar and generates the corresponding SLR parsing table along with FIRST and FOLLOW sets and the canonical collection of LR(0) items.
 
+![image](https://github.com/user-attachments/assets/2af9f96b-cf24-4af6-8aac-3fc2fcd36f4a)
+
+
 ## Features
 
 - Input a context-free grammar in standard notation
