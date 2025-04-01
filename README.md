@@ -48,6 +48,11 @@ E -> E + T | T
 T -> T * F | F
 F -> ( E ) | id
 ```
+![image](https://github.com/user-attachments/assets/f3b66381-6e17-450a-994e-c1298038ffc2)
+![image](https://github.com/user-attachments/assets/630b773c-d403-4201-aa4a-334f061d7550)
+![image](https://github.com/user-attachments/assets/e625c3d6-fc1e-4a2b-994c-5a7dd1c75294)
+![image](https://github.com/user-attachments/assets/ebdf981d-9ea6-4140-9499-69515d98303e)
+
 
 ## Implementation Details
 
