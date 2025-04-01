@@ -65,7 +65,7 @@ The implementation includes:
 
 ## Technical Stack
 
-- **Backend:** Python 3.x, Flask
+- **Backend:** Python 3.12, Flask 3.2.2
 - **Frontend:** HTML5, CSS3, JavaScript
 
 ## License
