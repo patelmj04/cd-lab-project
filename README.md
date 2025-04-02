@@ -22,16 +22,16 @@ A web-based tool for generating SLR parsing tables from context-free grammars. T
    git clone <https://github.com/Khanba22/cd-lab-project.git>
    cd <cd-lab-project>
    ```
-2. Install the required dependencies:
+3. Install the required dependencies:
    ```sh
    pip install -r requirements.txt
    ```
-3. Run the Flask application:
+4. Run the Flask application:
    ```sh
    python app.py
    ```
-4. Open your browser and navigate to `http://localhost:5000`
-5. Enter your grammar in the input field and click "Generate SLR Parsing Table"
+5. Open your browser and navigate to `http://localhost:5000`
+6. Enter your grammar in the input field and click "Generate SLR Parsing Table"
 
 ## Grammar Format
 
